@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ooh and Aah Archives</title>
+    
+    <!-- Script para mudar o ícone aleatoriamente -->
+    <script>
+        function setRandomFavicon() {
+            var icons = [
+                "images/icon1.png", 
+                "images/icon2.png"
+            ];
+
+            var randomIcon = icons[Math.floor(Math.random() * icons.length)];
+
+            var link = document.createElement("link");
+            link.rel = "icon";
+            link.type = "image/png";
+            link.href = randomIcon;
+
+            document.head.appendChild(link);
+        }
+
+        window.onload = setRandomFavicon;
+    </script>
+
+    <style>
+        @font-face {
+            font-family: 'Coolvetica';
+            src: url('fonts/Coolvetica.ttf') format('truetype');
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+        body {
+            background-image: url('images/bg2.png'), url('images/bg3.png'), url('images/bg1.png');
+            background-size: cover, cover;
+            background-position: center, center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .bg4 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            z-index: 10;
+        }
+
+        .centralizar {
+            text-align: center;
+        }
+
+        .logo {
+            width: 600px;
+            filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.5)); /* Sombras mais intensas */
+        }
+
+        .subtitulo {
+            width: 600px;
+            font-size: 18px;
+            color: #fff;
+            margin-top: 10px;
+            filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.5)); /* Sombras mais intensas */
+        }
+
+        .botoes {
+            margin-top: -15px;
+        }
+
+        .botao-imagem {
+            margin: 10px;
+            width: 60px;
+            height: 60px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s ease, filter 0.3s ease;
+            filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.5)); /* Sombras mais intensas */
+        }
+
+        .botao-imagem:hover {
+            transform: scale(1.1);
+            filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.6)); /* Sombras ainda mais intensas ao passar o mouse */
+        }
+
+        .menu a {
+            margin: 10px;
+            padding: 10px;
+            background-color: #34aeeb;
+            color: white;
+            text-decoration: none;
+            border: 1px solid #fff;
+            transition: background-color 0.3s, filter 0.3s;
+            font-family: 'Roboto', sans-serif;
+            border-radius: 8px;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4)); /* Sombras adicionadas aos botões do menu */
+        }
+
+        .menu a:hover {
+            background-color: #a0dcfa;
+            filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.5)); /* Sombras mais intensas ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+    <!-- Imagem bg4 no topo -->
+    <img src="images/bg4.png" alt="Imagem no topo" class="bg4">
+
+    <!-- Imagem Principal -->
+    <div class="centralizar">
+        <img src="images/logo.png" alt="Logo do site" class="logo">
+    </div>
+
+    <!-- Subtítulo com Imagem -->
+    <div class="centralizar">
+        <img src="images/subtitle.png" alt="Imagem do subtítulo" class="subtitulo">
+    </div>
+
+    <!-- Botões com Imagens (YouTube e Discord) -->
+    <div class="botoes">
+        <a href="https://www.youtube.com/channel/UCBwqNdciQF85vCB4nJDVJdQ" target="_blank">
+            <img src="images/yt.png" alt="Botão 1" class="botao-imagem">
+        </a>
+        <a href="https://discord.gg/hcwFKrVHMh" target="_blank">
+            <img src="images/disc.png" alt="Botão 2" class="botao-imagem">
+        </a>
+    </div>
+
+    <!-- Menu de Navegação para as páginas Bumpers, Shorts e Other -->
+    <div class="menu">
+        <a href="bumpers.html">Bumpers</a>
+        <a href="shorts.html">Shorts</a>
+        <a href="other.html">Other</a>
+    </div>
+</body>
+</html>
