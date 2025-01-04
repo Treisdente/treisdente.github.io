@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Other - Ooh and Aah Archives</title>
+    
+    <script>
+        function setRandomFavicon() {
+            var icons = [
+                "images/icon1.png", 
+                "images/icon2.png"
+            ];
+
+            var randomIcon = icons[Math.floor(Math.random() * icons.length)];
+
+            var link = document.createElement("link");
+            link.rel = "icon";
+            link.type = "image/png";
+            link.href = randomIcon;
+
+            document.head.appendChild(link);
+        }
+
+        window.onload = setRandomFavicon;
+    </script>
+</head>
+<body>
+    <!-- O conteúdo da sua página vai aqui -->
+</body>
+</html>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Other - Ooh and Aah Archives</title>
+    
+    <!-- Link para a fonte Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: #1a022b;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .centralizar {
+            text-align: center;
+        }
+
+        .menu a {
+            margin: 10px;
+            padding: 10px;
+            background-color: #290445;
+            color: white;
+            text-decoration: none;
+            border: 1px solid #fff;
+            transition: background-color 0.3s;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .menu a:hover {
+            background-color: #8a3d8f;
+        }
+
+        .botao-imagem {
+            margin: 10px;
+            width: 60px;
+            height: 60px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .botao-imagem:hover {
+            transform: scale(1.1);
+        }
+
+        .back-button {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            background-color: #290445;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            border: 1px solid #fff;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #8a3d8f;
+        }
+
+        .sub-abas {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .sub-aba {
+            padding: 10px 20px;
+            margin: 0 5px;
+            background-color: #290445;
+            border: 1px solid #fff;
+            cursor: pointer;
+            color: white;
+            font-size: 16px;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        .sub-aba:hover {
+            background-color: #8a3d8f;
+        }
+
+        .conteudo-sub-aba {
+            display: none;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .conteudo-sub-aba.ativa {
+            display: block;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #fff;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #290445;
+        }
+
+        .verde {
+            color: #1ceb34;
+        }
+
+        .red {
+            color: #ff3d4d;
+        }
+
+        .ve {
+            color: #f7ff14;
+        }
+
+        /* Novo estilo para o texto de "Found something? Share it with us!" */
+        .footer-text {
+            margin-top: 40px;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            color: white;
+        }
+
+        .footer-subtitle {
+            margin-top: 10px;
+            font-size: 18px;
+            text-align: center;
+            color: white;
+        }
+
+        .footer-link {
+            color: #8a3d8f;
+            text-decoration: none;
+        }
+
+        .footer-link:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Logo no topo -->
+    <img src="images/logo.png" alt="Logo" style="width: 150px; margin-top: 20px;">
+
+    <div class="centralizar">
+        <h1>Other</h1>
+        <div class="sub-abas">
+            <div class="sub-aba" onclick="mostrarConteudoSubAba('englishUS')">English (US/CA/UK/Asia)</div>
+            <div class="sub-aba" onclick="mostrarConteudoSubAba('portugueseBR')">Portuguese (Brazil)</div>
+            <div class="sub-aba" onclick="mostrarConteudoSubAba('portugueseEU')">Portuguese (EU)</div>
+            <div class="sub-aba" onclick="mostrarConteudoSubAba('french')">French</div>
+            <div class="sub-aba" onclick="mostrarConteudoSubAba('german')">German</div>
+            <div class="sub-aba" onclick="mostrarConteudoSubAba('italian')">Italian</div>
+            <div class="sub-aba" onclick="mostrarConteudoSubAba('japanese')">Japanese</div>
+            <div class="sub-aba" onclick="mostrarConteudoSubAba('spanishLA')">Spanish (L.A.)</div>
+            <div class="sub-aba" onclick="mostrarConteudoSubAba('mandarin')">Mandarin (Taiwan)</div>
+            <div class="sub-aba" onclick="mostrarConteudoSubAba('spanishEU')">Spanish (EU)</div> <!-- Botão de Spanish (EU) -->
+        </div>
+
+        <!-- Conteúdo das sub-abas -->
+        <div id="englishUS" class="conteudo-sub-aba">
+            <h3>Conteúdo - English (US/CA/UK/Asia)</h3>
+            <p>Aqui está o conteúdo da sub-aba English (US/CA/UK/Asia) para a aba Other.</p>
+        </div>
+        <div id="portugueseBR" class="conteudo-sub-aba">
+            <h3>Conteúdo - Portuguese (Brazil)</h3>
+            <p>Aqui está o conteúdo da sub-aba Portuguese (Brazil) para a aba Other.</p>
+        </div>
+        <div id="portugueseEU" class="conteudo-sub-aba">
+            <h3>Conteúdo - Portuguese (EU)</h3>
+            <p>Aqui está o conteúdo da sub-aba Portuguese (EU) para a aba Other.</p>
+        </div>
+
+    </div>
+
+        <div class="footer-text">
+            Found something? Share it with us!
+        </div>
+        <div class="footer-subtitle">
+            Join our <a href="https://discord.gg/hcwFKrVHMh" class="footer-link" target="_blank">Discord</a>
+        </div>
+    </div>
+
+    <div class="footer-image">
+        <img src="images/oohaah.png" alt="Ooh and Aah Image" style="width: 300px; margin-top: 20px;">
+    </div>
+
+    <a href="index.html" class="back-button">← Back</a>
+
+    <script>
+        function mostrarConteudoSubAba(subAba) {
+            var conteudosSubAba = document.querySelectorAll('.conteudo-sub-aba');
+            conteudosSubAba.forEach(function(conteudo) {
+                conteudo.classList.remove('ativa');
+            });
+
+            document.getElementById(subAba).classList.add('ativa');
+        }
+    </script>
+</body>
+</html>
